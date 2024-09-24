@@ -3,3 +3,4 @@ alert(numbers);
 numbers = "Bethan";
 alert(numbers);
 alert(typeof numbers);
+
