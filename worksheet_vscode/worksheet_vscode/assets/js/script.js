@@ -1,5 +1,5 @@
 let numbers = 23
-console.log(numbers);
+alert(numbers);
 numbers = "Bethan";
-console.log(numbers);
-console.log(typeof numbers);
+alert(numbers);
+alert(typeof numbers);
