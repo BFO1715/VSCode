@@ -6,7 +6,7 @@ function isValidPhoneNumber(phone) {
 function isValidBirthdate(date) {
     const today = new Date();
     const birthDate = new Date(date);
-    return birthDate < today && birthDate.getFullYear() >= 1900; // Arbitrary start year for valid range
+    return birthDate < today && birthDate.getFullYear() >= 1900; 
 }
 
 // Unique ID generator
