@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Management System</title>
+    <link rel="stylesheet" href="stylecms.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Contact Management System</h1>
+        
+        <div id="contact-form">
+            <h2>Create/Edit Contact</h2>
+            <form id="contactForm">
+                <input type="hidden" id="contactId" />
+                
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" required minlength="2" />
+
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" required minlength="2" />
+
+                <label for="phoneNumbers">Phone Number(s):</label>
+                <input type="text" id="phoneNumbers" placeholder="e.g., 07123456789" required pattern="^(01|02|07)[0-9]{9}$"/>
+
+                <label for="emails">Email(s):</label>
+                <input type="email" id="emails" placeholder="e.g., example@example.com" required />
+
+                <label for="birthdate">Birthdate:</label>
+                <input type="date" id="birthdate" required />
+
+                <button type="submit">Save Contact</button>
+            </form>
+        </div>
+
+        <div id="search-section">
+            <input type="text" id="searchField" placeholder="Search Contacts" />
+            <button onclick="searchContacts()">Search</button>
+        </div>
+
+        <div id="contact-list">
+            <h2>All Contacts</h2>
+            <ul id="contactsContainer"></ul>
+        </div>
+    </div>
+
+    <script src="scriptcms.js"></script>
+</body>
+</html>

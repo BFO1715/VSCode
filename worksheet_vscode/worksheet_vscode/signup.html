@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="assets/css/stylesu.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Sign Up</h2>
+        <form id="signupForm" onsubmit="return validateForm()">
+            <div class="form-group">
+                <label for="name">Customer</label>
+                <input type="text" id="name" name="name" placeholder="Enter customer name">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter customer email">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password">
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn">Sign Up</button>
+            </div>
+
+            <p id="error-message" class="error-message"></p>
+        </form>
+    </div>
+
+    <script src="assets/js/scriptsu.js"></script>
+</body>
+</html>
