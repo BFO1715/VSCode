@@ -31,9 +31,13 @@ function displayContacts() {
     const contacts = loadContacts();
     contacts.forEach(contact => {
         const li = document.createElement('li');
-        li.innerHTML = `${contact.firstName} ${contact.lastName} - ${contact.phoneNumbers.join(', ')} - ${contact.emails.join(', ')} - ${contact.birthdate}
-            <button onclick="editContact('${contact.id}')">Edit</button>
-            <button onclick="deleteContact('${contact.id}')">Delete</button>`;
+        li.innerHTML = `
+            ${contact.firstName} ${contact.lastName} - ${contact.phoneNumbers.join(', ')} - ${contact.emails.join(', ')} - ${contact.birthdate}
+            <div class="button-group">
+                <button onclick="editContact('${contact.id}')">Edit</button>
+                <button onclick="deleteContact('${contact.id}')">Delete</button>
+            </div>
+        `;
         contactsContainer.appendChild(li);
     });
 }
@@ -80,7 +84,13 @@ function displayFilteredContacts(contacts) {
     contactsContainer.innerHTML = '';
     contacts.forEach(contact => {
         const li = document.createElement('li');
-        li.innerHTML = `${contact.firstName} ${contact.lastName} - ${contact.phoneNumbers.join(', ')} - ${contact.emails.join(', ')} - ${contact.birthdate}`;
+        li.innerHTML = `
+            ${contact.firstName} ${contact.lastName} - ${contact.phoneNumbers.join(', ')} - ${contact.emails.join(', ')} - ${contact.birthdate}
+            <div class="button-group">
+                <button onclick="editContact('${contact.id}')">Edit</button>
+                <button onclick="deleteContact('${contact.id}')">Delete</button>
+            </div>
+        `;
         contactsContainer.appendChild(li);
     });
 }
